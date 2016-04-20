@@ -5,7 +5,7 @@ public class Backup {
     private int backupId;
     private Date backupDate;
     private String backupHost;
-    private String backupPath;
+    private File backupPath;
 
     // Constructor
     public Backup(Date date, String host) {
@@ -24,6 +24,15 @@ public class Backup {
 
     public String getHost() {
         return backupHost;
+    }
+
+    public File getPath() {
+        return backupPath;
+    }
+
+    // Setters
+    public File setPath(File path) {
+        this.backupPath = path;
     }
 }
 
